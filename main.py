@@ -55,7 +55,11 @@ class Game:
             self.game_map.draw_top(self.screen_surf)
             # self.game_map.draw_grid(self.screen_surf)
             pygame.display.update()
-
+            
+   def event_handler(self):
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit( )
 
 
 if __name__ == '__main__':
